@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:28:32 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/16 16:23:17 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/16 18:24:07 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	int			bytes_read;
 
-	if (fd < 0 || fd > 1024 || BUFFER_SIZE < 1)
+	if (fd < 0 || fd >= 1024 || BUFFER_SIZE < 1)
 		return (NULL);
 	line = NULL;
 	line = ft_strjoin(line, buffer);
