@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:30:23 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/14 16:37:53 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:23:03 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char *line, char *buffer)
 
 	sjoin = malloc((ft_strlen(line) + ft_strlen(buffer) + 1) * sizeof(char));
 	if (!sjoin)
-		return (NULL);
+		return (free(line), NULL);
 	i = 0;
 	j = 0;
 	while (line && line[i])
