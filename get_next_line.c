@@ -12,6 +12,7 @@
 
 #include "get_next_line.h"
 //#include <stdio.h>
+// printf e perror
 //#include <fnctl.h>
 // open e a flag O_RDONLY
 char	*get_next_line(int fd)

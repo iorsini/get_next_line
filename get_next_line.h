@@ -20,7 +20,7 @@
 //  malloc, free
 # include <stdlib.h>
 
-//  read
+//  read, close
 # include <unistd.h>
 
 char	*get_next_line(int fd);
