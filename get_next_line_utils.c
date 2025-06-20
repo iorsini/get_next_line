@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:30:23 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/20 15:43:40 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/20 17:58:45 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	shift(char *buffer)
 	if (buffer[i] == '\n')
 		i++;
 	j = 0;
-	while (buffer[i + j])
+	while (buffer[i + j] != '\0')
 	{
 		buffer[j] = buffer[j + i];
 		j++;
