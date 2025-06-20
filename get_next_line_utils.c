@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:30:23 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/16 16:23:03 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/20 15:38:42 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,19 @@ char	*ft_strjoin(char *line, char *buffer)
 		return (free(line), NULL);
 	i = 0;
 	j = 0;
-	while (line && line[i])
+	while (line != NULL && line[i] != '\0')
 	{
 		sjoin[i] = line[i];
 		i++;
 	}
-	while (j < BUFFER_SIZE && buffer[j] && buffer[j] != '\n')
+	while (j < BUFFER_SIZE && buffer[j] != '\0' && buffer[j] != '\n')
 	{
 		sjoin[i + j] = buffer[j];
 		j++;
 	}
 	if (buffer[j] == '\n')
 		sjoin[i + j] = buffer[j];
-	j += (buffer[j] == '\n');
+	j = j + (buffer[j] == '\n');
 	sjoin[i + j] = '\0';
 	return (free(line), sjoin);
 }
@@ -82,5 +82,5 @@ void	shift(char *buffer)
 		buffer[j] = buffer[j + i];
 		j++;
 	}
-	buffer[j] = 0;
+	buffer[j] = '\0';
 }
