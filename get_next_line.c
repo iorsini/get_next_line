@@ -6,14 +6,14 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:28:32 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/20 16:57:45 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:20:25 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 //#include <stdio.h>
-//#include <fcntl.h>
-
+//#include <fnctl.h>
+// open e a flag O_RDONLY
 char	*get_next_line(int fd)
 {
 	static char	buffer[BUFFER_SIZE + 1];

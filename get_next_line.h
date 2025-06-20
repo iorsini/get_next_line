@@ -17,10 +17,10 @@
 #  define BUFFER_SIZE 42
 # endif
 
-//  malloc, free, size_t
+//  malloc, free
 # include <stdlib.h>
 
-//  close, read
+//  read
 # include <unistd.h>
 
 char	*get_next_line(int fd);
