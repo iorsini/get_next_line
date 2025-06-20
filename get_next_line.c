@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:28:32 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/16 18:24:07 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/20 16:57:45 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_next_line(int fd)
 	while (!ft_strchr(buffer))
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
-		if (bytes_read == -1 || buffer[0] == 0)
+		if (bytes_read == -1 || buffer[0] == '\0')
 			return (free(line), shift(buffer), NULL);
 		if (!bytes_read)
 			break ;
