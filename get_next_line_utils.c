@@ -6,7 +6,7 @@
 /*   By: iorsini- <iorsini-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:30:23 by iorsini-          #+#    #+#             */
-/*   Updated: 2025/06/20 15:38:42 by iorsini-         ###   ########.fr       */
+/*   Updated: 2025/06/20 15:43:40 by iorsini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ int	ft_strlen(char *s)
 	int	i;
 
 	i = 0;
-	while (s && s[i] != '\0' && s[i] != '\n')
+	while (s != NULL && s[i] != '\0' && s[i] != '\n')
 		i++;
-	if (s && s[i] == '\n')
+	if (s != NULL && s[i] == '\n')
 		i++;
 	return (i);
 }
@@ -57,7 +57,7 @@ int	ft_strchr(const char *s)
 	int		i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		if (s[i] == '\n')
 			return (1);
@@ -72,7 +72,7 @@ void	shift(char *buffer)
 	int	j;
 
 	i = 0;
-	while (buffer[i] && buffer[i] != '\n')
+	while (buffer[i] != '\0' && buffer[i] != '\n')
 		i++;
 	if (buffer[i] == '\n')
 		i++;
